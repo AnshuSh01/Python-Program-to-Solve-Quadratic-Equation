@@ -1,0 +1,15 @@
+ import cmath #import the cmath pre-builtin library to use the cmath.sqrt Function
+def Quadratic(a,b,c):#Function which calculates the Roots and return the roots to the main Function
+    d=(b**2)-4*a*c
+    x1 = (-b-cmath.sqrt(d))/(2*a)#To Find the Root apply formula 
+    x2 = (-b+cmath.sqrt(d))/(2*a)
+    return x1,x2
+
+
+if __name__ == '__main__':
+    a=int(input("Enter the Coefficent of x^2 \t")) #Take Coefficents as input
+    b=int(input("\nEnter the Coefficent of x\t"));
+    c=int(input("\nEnter the Constant Coefficient\t"))
+     
+    save=Quadratic(a,b,c)#save the Value which is return by the Quadratic Function
+    print(f"The Roots of Quadratic Equation are=\t",save)
